@@ -1,0 +1,14 @@
+{
+  "name": "xl_city_choose",
+  "version": "1.0.2",
+  "description": "城市选择",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xiaolong",
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}
