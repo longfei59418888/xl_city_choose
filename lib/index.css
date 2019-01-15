@@ -1,0 +1,134 @@
+.xl_city_choose_box {
+  padding-top: 50Px;
+  font-size: 12Px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow-y: scroll; }
+  .xl_city_choose_box ::-webkit-input-placeholder {
+    color: #b9b9b9; }
+  .xl_city_choose_box .over-div {
+    width: 100%;
+    height: 50Px;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    background-color: #f9f9f9; }
+  .xl_city_choose_box .xl_city_search {
+    height: 50Px;
+    padding: 10Px;
+    width: calc(100% + 50Px); }
+    .xl_city_choose_box .xl_city_search .search-box {
+      float: left;
+      border-radius: 3Px;
+      overflow: hidden;
+      height: 30Px;
+      background-color: #fff;
+      display: flex;
+      width: calc(100% - 50Px);
+      position: relative; }
+      .xl_city_choose_box .xl_city_search .search-box .placeholder p {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        top: 0;
+        align-items: center;
+        margin-left: 0;
+        left: 50%;
+        z-index: 2; }
+        .xl_city_choose_box .xl_city_search .search-box .placeholder p.fours {
+          left: 0; }
+        .xl_city_choose_box .xl_city_search .search-box .placeholder p > img {
+          width: 16Px;
+          height: 16Px;
+          margin-right: 2Px;
+          margin-left: 6Px; }
+        .xl_city_choose_box .xl_city_search .search-box .placeholder p span {
+          color: #b9b9b9; }
+      .xl_city_choose_box .xl_city_search .search-box > img {
+        width: 16Px;
+        height: 16Px;
+        position: absolute;
+        right: 10Px;
+        top: 7Px;
+        z-index: 9; }
+      .xl_city_choose_box .xl_city_search .search-box input {
+        width: 100%;
+        border: none;
+        line-height: 30Px;
+        height: 30Px;
+        padding: 0;
+        background-color: transparent;
+        padding-left: 24Px;
+        position: relative;
+        z-index: 4; }
+    .xl_city_choose_box .xl_city_search > span {
+      width: 50Px;
+      float: left;
+      font-size: 14Px;
+      color: #3B7ED1;
+      text-align: center;
+      line-height: 30Px; }
+  .xl_city_choose_box .xl_city_choose_content-box {
+    flex: 1; }
+    .xl_city_choose_box .xl_city_choose_content-box .xl_city_search_list {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .xl_city_choose_box .xl_city_choose_content-box .xl_city_search_list .list {
+        max-height: 400Px;
+        overflow: scroll;
+        background-color: #fff; }
+        .xl_city_choose_box .xl_city_choose_content-box .xl_city_search_list .list .item {
+          line-height: 40Px;
+          padding-left: 15Px;
+          font-size: 14Px; }
+          .xl_city_choose_box .xl_city_choose_content-box .xl_city_search_list .list .item:not(:last-child) {
+            border-bottom: 1px solid #eee; }
+  .xl_city_choose_box .xl_city_choose_char-list {
+    position: fixed;
+    right: 0;
+    top: 13%;
+    z-index: 99; }
+    .xl_city_choose_box .xl_city_choose_char-list p {
+      width: 30Px;
+      line-height: 18Px;
+      text-align: center; }
+  .xl_city_choose_box .xl_city_choose_list .lately-city-box, .xl_city_choose_box .xl_city_choose_list .hot-city-box {
+    margin-bottom: 10Px;
+    background: #fff;
+    padding: 20Px 20Px 10Px; }
+    .xl_city_choose_box .xl_city_choose_list .lately-city-box h5, .xl_city_choose_box .xl_city_choose_list .hot-city-box h5 {
+      font-size: 14PX; }
+    .xl_city_choose_box .xl_city_choose_list .lately-city-box > div, .xl_city_choose_box .xl_city_choose_list .hot-city-box > div {
+      overflow: hidden; }
+      .xl_city_choose_box .xl_city_choose_list .lately-city-box > div p, .xl_city_choose_box .xl_city_choose_list .hot-city-box > div p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10Px;
+        float: left;
+        border: 1Px solid #ddd;
+        height: 26Px;
+        margin-right: 5Px;
+        margin-top: 10Px;
+        border-radius: 4Px; }
+        .xl_city_choose_box .xl_city_choose_list .lately-city-box > div p img, .xl_city_choose_box .xl_city_choose_list .hot-city-box > div p img {
+          width: 16Px; }
+  .xl_city_choose_box .xl_city_choose_list .list-item .item-box h5 {
+    padding-left: 15Px;
+    line-height: 35Px;
+    color: #666;
+    font-weight: 600; }
+  .xl_city_choose_box .xl_city_choose_list .list-item .item-box > div {
+    background: #fff;
+    padding-left: 10Px; }
+    .xl_city_choose_box .xl_city_choose_list .list-item .item-box > div p {
+      line-height: 40Px;
+      border-bottom: 1Px solid #eee; }
+
+/*# sourceMappingURL=test.css.map */

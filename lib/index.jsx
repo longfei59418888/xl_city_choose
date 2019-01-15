@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.scss';
-import SearchBox from './searchBox';
-import SearchList from './searchList';
+import SearchBox from './searchBox.min';
+import SearchList from './searchList.min';
+import './index.css'
 
 class Main extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Main extends React.Component {
     };
   }
   async componentWillMount() {
-    const city = await import('./cityList.js');
+    const city = await import('src/utils/cityList.js');
     const CITY = city.default;
     const CHAR = Object.keys(CITY);
     this.setState({
@@ -83,15 +83,15 @@ class Main extends React.Component {
     let latelyCity = localStorage.getItem('xl_city_choose_box_lately');
     latelyCity = latelyCity ? JSON.parse(latelyCity) : [];
     const List = [];
-    CHAR.forEach((item) => {
+    CHAR.forEach((item,index) => {
       if (CITY[item] && CITY[item].length > 0) {
-        const childList = CITY[item].map(item => (
-          <p key={item.c_name} onClick={() => this.chooseItem(item)}>
+        const childList = CITY[item].map((item,index) => (
+          <p key={index} onClick={() => this.chooseItem(item)}>
             {item.name}
           </p>
         ));
         List.push(
-          <div key={item} id={item} className={`${item} item-box`}>
+          <div key={index} id={item} className={`${item} item-box`}>
             <h5>{item}</h5>
             <div>{childList}</div>
           </div>,
@@ -131,6 +131,7 @@ class Main extends React.Component {
                 <div>
                   {currentCity ? (
                     <p
+                      key={10}
                       onClick={() => {
                         this.chooseItem(currentCity);
                       }}
@@ -140,8 +141,8 @@ class Main extends React.Component {
                     </p>
                   ) : ''}
 
-                  {latelyCity.map(item => (
-                    <p onClick={(item) => {
+                  {latelyCity.map((item,index) => (
+                    <p key={index} onClick={(item) => {
                       this.chooseItem(item);
                     }}>
                       {item.name}
@@ -152,8 +153,8 @@ class Main extends React.Component {
               <div className="hot-city-box">
                 <h5>热门城市</h5>
                 <div>
-                  {hotCity.map(item => (
-                    <p onClick={(item) => {
+                  {hotCity.map((item,index) => (
+                    <p key={index} onClick={(item) => {
                       this.chooseItem(item);
                     }}>
                       {item.name}
@@ -176,7 +177,7 @@ function CharList(props) {
   return (
     <div className="xl_city_choose_char-list">
       {list.map(item => (
-        <p className="hover-bg" onClick={() => goPage(item)}>
+        <p key={item} className="hover-bg" onClick={() => goPage(item)}>
           {item}
         </p>
       ))}
